@@ -1,10 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "layout.html" %}
 
-</body>
-</html>
+{%  block title %}
+    Tabellen
+{% endblock %}
+
+{% block tabellen %}
+    class="active"
+{% endblock %}
+
+{% block body %}
+    <section>
+    <h1>Gegevens aquarium</h1>
+        <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Toon gegevens</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Temperatuur</th>
+                                <th>pH</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+			                    <td>Data 1</td>
+			                    <td>Data 2</td>
+			                </tr>
+			                <tr>
+			                    <td>Data 1</td>
+			                    <td>Data 2</td>
+			                </tr>
+			                <tr>
+			                    <td>Data 1</td>
+			                    <td>Data 2</td>
+			                </tr>
+			                <tr>
+			                    <td>Data 1</td>
+			                    <td>Data 2</td>
+			                </tr>
+			                <tr>
+			                    <td>Data 1</td>
+			                    <td>Data 2</td>
+			                </tr>
+			                <tr>
+			                    <td>Data 1</td>
+			                    <td>Data 2</td>
+			                </tr>
+                        </tbody>
+                    </table>
+                </div>
+        </div>
+    </section>
+    <script src="/static/js/dropdown.js"></script>
+{% endblock %}

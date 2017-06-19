@@ -1,15 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Aquatemp</title>
-</head>
-<body>
-    <h2><div class="aqua">Aquatemp</div></h2>
-    <div class="menu">Tabellen</div>
-    <div type="type">Sensor</div>
-    <div type="type">Aquarium temperatuur</div>
-    <div type="type">Alarm</div>
-    <div type="type">Aquarium pH</div>
-</body>
-</html>
+{% extends "layout.html" %}
+
+{%  block title %}
+    Aquatemp
+{% endblock %}
+
+{% block home %}
+    class="active"
+{% endblock %}
+
+{% block body %}
+    <section>
+        <div class="txt">Sensor</div>
+        <div class="txt">Aquarium temperatuur</div>
+        <div class="txt">Alarm</div>
+        <div class="txt">Aquarium pH</div>
+    </section>
+    <footer class="footer-distributed">
+
+			<div class="footer-left">
+
+				<p class="footer-links">
+					<a href="{{ url_for('index') }}">Aquatemp</a>
+					<a href="{{ url_for('tabellen') }}">Tabellen</a>
+				</p>
+
+				<p>Wannes Benoit &copy; 2017</p>
+			</div>
+
+	</footer>
+{% endblock %}
